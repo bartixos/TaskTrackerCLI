@@ -17,12 +17,12 @@ namespace TaskTrackerCLI {
             switch (command) {
                 case "help":
                     WriteHelp();
-                    break;
+                    return;
 
                 case "add":
                     AddCommand(args[1..]);
 
-                    break;
+                    return;
                 case "list":
                     if (args.Length == 1) {
                         WriteTasksConsole(null);
@@ -31,43 +31,43 @@ namespace TaskTrackerCLI {
                         WriteTasksConsole(args[1]);
                     }
 
-                    break;
+                    return;
                 case "delete":
                     if (args.Length == 2) {
                         int id;
                         if (int.TryParse(args[1], out id)) {
                             DeleteTask(id);
-                            break;
+                            return;
                         }
                     }
                     Console.WriteLine("You have to give correct task id");
-                    break;
+                    return;
                 case "mark-in-progress":
                     if (args.Length == 2) {
                         int id;
                         if (int.TryParse(args[1], out id)) {
                             MarkTask(id, TaskStatus.In_Progres);
-                            break;
+                            return;
                         }
                     }
 
                     Console.WriteLine("To mark in progress task you have to type id of the task");
-                    break;
+                    return;
                 case "mark-done":
                     if (args.Length == 2) {
                         int id;
                         if (int.TryParse(args[1], out id)) {
                             MarkTask(id, TaskStatus.Done);
-                            break;
+                            return;
                         }
                     }
-                    break;
+                    return;
                 case "update":
                     if (args.Length == 3) {
                         int id;
                         if (int.TryParse(args[1], out id)) {
                             Update(id, args[2]);
-                            break;
+                            return;
                         }
                     }
 
