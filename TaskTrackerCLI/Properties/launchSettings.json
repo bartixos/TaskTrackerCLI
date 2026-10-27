@@ -1,0 +1,36 @@
+{
+  "profiles": {
+    "WSL": {
+      "commandName": "WSL2",
+      "distributionName": ""
+    },
+    "List all": {
+      "commandName": "Project",
+      "commandLineArgs": "list"
+    },
+    "Add": {
+      "commandName": "Project",
+      "commandLineArgs": "add \"Test\"\r\n"
+    },
+    "update": {
+      "commandName": "Project",
+      "commandLineArgs": "update 1 \"Zrobic pranie\"\r\n"
+    },
+    "mark In progress": {
+      "commandName": "Project",
+      "commandLineArgs": "mark-in-progress 3\r\n"
+    },
+    "Mark done": {
+      "commandName": "Project",
+      "commandLineArgs": "mark-done 1\r\n"
+    },
+    "Delete": {
+      "commandName": "Project",
+      "commandLineArgs": "delete 2\r\n"
+    },
+    "Help": {
+      "commandName": "Project",
+      "commandLineArgs": "help\r\n"
+    }
+  }
+}
